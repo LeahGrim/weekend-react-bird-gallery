@@ -15,7 +15,7 @@ function App() {
     //pair this with a function that pushes the gallery images (state) into the empty array
     let [galleryList, setGalleryList] = useState([]);
 
-    //don't know what this does but did this in the group project
+    //don't know what this does, but did this in the group project
     useEffect ( () => {
       getGallery();
     }, []);
@@ -38,10 +38,10 @@ function App() {
           })
 
     }
-    const registerLikes = (event) => {
+    const registerLikes = (galleryList) => {
       axios({
         method: 'PUT',
-        url: `/gallery/like/${id}`
+        url: `/gallery/likes/${galleryList.id}`
       }).then(response => {
         console.log('PUT success on likes.jsx, likes updated', response);
         getGallery();

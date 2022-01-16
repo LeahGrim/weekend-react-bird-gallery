@@ -32,8 +32,9 @@ function GalleryItem({picture, registerLikes}){
                       <h3 onClick= {onDescriptionClick} className= "descriptionBox"> {picture.description}</h3>
                     }
                     <h2> {picture.title}</h2>
-                    {/* Functions and attributes of our object "picture" that we are passing through to Likes file */}
+                    {/* passing through registerLikes function and .likes & .id attributes of our object "picture" to Likes File */}
                     <Likes key = {picture.id} 
+                            picture = {picture}
                            likes = {picture.likes}  
                            registerLikes= {registerLikes}/> 
         </div>

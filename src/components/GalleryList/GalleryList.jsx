@@ -6,7 +6,6 @@ import '../GalleryList/GalleryList.css'
 function GalleryList({galleryList, registerLikes}) {
 
     return(
-
               <div className= "containerForPics">
      {/* This is where we iterate through the object "galleryList" which is derived from App.jsx via .map */}
      {/* each item of galleryList is referred to as "picture" from here on out  */}
