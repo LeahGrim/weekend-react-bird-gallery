@@ -40,13 +40,14 @@ function App() {
 
 
 
+
     return (
       <div className="App">
         <Header />
-        <h2>You're always being watched, so watch them back... Bird on!!</h2>
+           <div className='inspiration'><h2>You're always being watched, so watch them back... Bird on!!</h2></div>
         {/* export the filled array from the GET request & 
         GET request itself to the subsequent jsx folder to display images where it is called on app.jsx*/}
-        <GalleryList galleryList={galleryList}/>
+        <GalleryList galleryList={galleryList} getGallery= {getGallery}/>
         
       </div>
     );

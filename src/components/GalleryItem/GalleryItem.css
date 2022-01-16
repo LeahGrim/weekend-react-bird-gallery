@@ -1,18 +1,22 @@
 .pics{
     margin: 10px;
-    width:200px;
-    height: 200px;
     display: flex;
 
 }
 
 .pictureBox{
-    width: 20%;
+    width: 10%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
+    margin-bottom: 20px;
+
 }
 
-.likes{
+/* .likes{
     margin-bottom: 10px;
+} */
+
+h2{
+    margin:0px
 }

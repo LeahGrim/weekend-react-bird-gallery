@@ -1,21 +1,22 @@
 import './GalleryItem.css'
+import Likes from '../Likes/Likes.jsx'
+//import PictureDescription from '../PictureDescription/PictureDescription.jsx';
 
-
-function GalleryItem({picture}){
+function GalleryItem({picture, getGallery}){
     console.log('item we are destructuring,', picture);
+
 
     return(
       <>
     
-      <div className= "pictureBox" key={picture.id}>
-                <img className= "pics" src= {picture.path} />
-                {picture.description}
-                <div className="likes">
-                Likes: {picture.likes} <br />
-                </div>
-                <button className= "Buttons"> Like </button>
-                <button className= "Buttons">  Dislike  </button>
-                </div>
+        <div className= "pictureBox" key={picture.id}>
+                    <img className= "pics" src= {picture.path} width={250} height= {250}
+                    onClick= {picture.Description}/>
+                      {picture.description}
+                    <Likes likes = {picture.likes} key = {picture.id} getGallery={getGallery}/> 
+                    
+                    
+        </div>
       </>
     )
 }
