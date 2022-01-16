@@ -1,7 +1,7 @@
 import {useState} from 'react';
 //import axios from 'axios';
 
-function Likes({likes, getGallery}){
+function Likes({likes, registerLikes}){
     const [totalLikes, setLikes]= useState(likes)
     function addLike(){
         console.log

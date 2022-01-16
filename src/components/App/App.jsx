@@ -37,7 +37,7 @@ function App() {
           })
 
     }
-    const registerLikes = (id) => {
+    const registerLikes = (event) => {
       axios({
         method: 'PUT',
         url: `/gallery/like/${id}`

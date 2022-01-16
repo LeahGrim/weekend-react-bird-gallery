@@ -7,7 +7,9 @@ function GalleryList({galleryList, getGallery, registerLikes}) {
 
               <div className= "containerForPics">
             {galleryList.map(picture => (
-            <GalleryItem picture = {picture} key = {picture.id} getGallery= {getGallery} registerLikes= {registerLikes} />
+            <GalleryItem key = {picture.id}
+                         picture = {picture}   
+                         registerLikes= {registerLikes} />
              ))}
             
         </div>
