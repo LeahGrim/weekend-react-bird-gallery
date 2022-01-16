@@ -16,7 +16,7 @@ router.put('/likes/:id', (req, res) => {
     res.sendStatus(200);
 }); // END PUT Route
 
-
+//PUT route to register dislikes on server 
 router.put('/dislikes/:id', (req, res) => {
     console.log('the req.params are', req.params);
     const galleryId = req.params.id;

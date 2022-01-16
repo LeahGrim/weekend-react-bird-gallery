@@ -1,8 +1,6 @@
 //child of GalleryItem.jsx
 
 
-//import axios from 'axios';
-
 function Likes({registerLikes, picture, registerDislikes}){
 
     return (

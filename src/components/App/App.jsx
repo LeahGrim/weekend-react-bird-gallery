@@ -37,6 +37,7 @@ function App() {
             console.log('something funky happened on the app.jsx GET request', err);
           })
       }
+      // function to register dislike both on the DOM and Server 
       const registerDislikes = (galleryList) => {
       axios({
           method: 'PUT',
@@ -48,8 +49,8 @@ function App() {
           console.log('something funky happened on the PUT request in the likes.jsx', error);
       })
 
-
       }
+
       //not sure why I have to put galleryList here but tried it and it worked
       const registerLikes = (galleryList) => {
         axios({
