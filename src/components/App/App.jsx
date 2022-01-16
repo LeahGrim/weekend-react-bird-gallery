@@ -24,12 +24,13 @@ function App() {
     //and later pushes the images into the empty array using setGallery
 
     const getGallery = () => {
-      //axios GET request
+      //axios GET request 
+      // requesting data from our server and later storing that data in the array "gallery" via setGalleryList
       axios.get('/gallery')
           .then((res)=> {
             console.log('GET request to grab gallery images on app.jsx: Success!!', res.data);
             
-            //store the state (images from server = res.data) into the empty array (gallery)
+            //set the state (images from server = res.data) into the empty array (gallery)
             setGalleryList(res.data);
           })
           .catch((err) => {
@@ -54,7 +55,7 @@ function App() {
     return (
       <div className="App">
         <Header />
-           <div className='inspiration'><h2>You're always being watched, so watch them back... Bird on!!</h2></div>
+           <div className='inspiration'> <h2>You're always being watched, so watch them back... Bird on!!</h2></div>
         {/* export the filled array from the GET request & 
         GET request itself to the subsequent jsx folder to display images where it is called on app.jsx*/}
         <GalleryList galleryList={galleryList} getGallery= {getGallery} registerLikes={registerLikes}/>
