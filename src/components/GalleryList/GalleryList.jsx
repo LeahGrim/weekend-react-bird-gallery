@@ -1,7 +1,7 @@
 import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 import '../GalleryItem/GalleryItem.css'
 import '../GalleryList/GalleryList.css'
-function GalleryList({galleryList, getGallery, registerLikes}) {
+function GalleryList({galleryList, registerLikes}) {
 
     return(
 
