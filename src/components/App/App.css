@@ -1,5 +1,6 @@
 .App {
   text-align: center;
+  background-color: rgb(211, 203, 188) ;
 }
 
 .App-header {
@@ -17,3 +18,4 @@
   margin-top: 50px;
   text-align:center
 }
+

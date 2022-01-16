@@ -36,34 +36,45 @@ function App() {
           .catch((err) => {
             console.log('something funky happened on the app.jsx GET request', err);
           })
-
-
-
-    }
-    //not sure why I have to put galleryList here but tried it and it worked
-    const registerLikes = (galleryList) => {
+      }
+      const registerDislikes = (galleryList) => {
       axios({
-        method: 'PUT',
-        url: `/gallery/likes/${galleryList.id}`
+          method: 'PUT',
+          url: `/gallery/dislikes/${galleryList.id}`
       }).then(response => {
-        console.log('PUT success on likes.jsx, likes updated', response);
-        getGallery();
+          console.log('PUT success on likes.jsx, likes updated', response);
+          getGallery();
       }).catch((error) => {
-        console.log('something funky happened on the PUT request in the likes.jsx', error);
+          console.log('something funky happened on the PUT request in the likes.jsx', error);
       })
-    }
 
 
-    const refresh = () => {
-      getGallery();
-    }
+      }
+      //not sure why I have to put galleryList here but tried it and it worked
+      const registerLikes = (galleryList) => {
+        axios({
+          method: 'PUT',
+          url: `/gallery/likes/${galleryList.id}`
+        }).then(response => {
+          console.log('PUT success on likes.jsx, likes updated', response);
+          getGallery();
+        }).catch((error) => {
+          console.log('something funky happened on the PUT request in the likes.jsx', error);
+        })
+      }
+
+
+  
     return (
       <div className="App">
         <Header />
            <div className='inspiration'> <h2>You're always being watched, so watch them back... Bird on!!</h2></div>
         {/* export the filled array from the GET request & 
         GET request itself to the subsequent jsx folder to display images where it is called on app.jsx*/}
-        <GalleryList galleryList={galleryList} getGallery= {getGallery} registerLikes={registerLikes}/>
+        <GalleryList galleryList={galleryList} 
+                     getGallery= {getGallery} 
+                     registerLikes={registerLikes}
+                     registerDislikes= {registerDislikes}/>
         <Footer />
 
       </div>

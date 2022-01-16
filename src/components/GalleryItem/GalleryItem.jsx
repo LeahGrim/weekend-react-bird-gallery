@@ -7,7 +7,7 @@ import {useState} from 'react';
 //completed           SWITCH BETWEEN PICTURE AND DESCRIPTION:
 
 
-function GalleryItem({picture, registerLikes}){
+function GalleryItem({picture, registerLikes, registerDislikes}){
           //console.log('item we are destructuring,', picture);         
         const[swap, setSwap] = useState(true);
       //defined a random variable (swap) to a true/false value so onClick of the div, 
@@ -35,8 +35,9 @@ function GalleryItem({picture, registerLikes}){
                     {/* passing through registerLikes function and .likes & .id attributes of our object "picture" to Likes File */}
                     <Likes key = {picture.id} 
                             picture = {picture}
-                           likes = {picture.likes}  
-                           registerLikes= {registerLikes}/> 
+               
+                           registerLikes= {registerLikes}
+                           registerDislikes={registerDislikes}/> 
         </div>
       </>
     )

@@ -3,7 +3,7 @@ import GalleryItem from '../GalleryItem/GalleryItem.jsx'
 import '../GalleryItem/GalleryItem.css'
 import '../GalleryList/GalleryList.css'
 
-function GalleryList({galleryList, registerLikes}) {
+function GalleryList({galleryList, registerLikes, registerDislikes}) {
 
     return(
               <div className= "containerForPics">
@@ -15,7 +15,8 @@ function GalleryList({galleryList, registerLikes}) {
                                                      //         (3) the function registerLikes
             <GalleryItem key = {picture.id}
                          picture = {picture}   
-                         registerLikes= {registerLikes} />
+                         registerLikes= {registerLikes} 
+                         registerDislikes= {registerDislikes}/>
              ))}
             
         </div>
