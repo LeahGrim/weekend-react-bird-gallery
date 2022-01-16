@@ -37,7 +37,10 @@ function App() {
             console.log('something funky happened on the app.jsx GET request', err);
           })
 
+
+
     }
+    //not sure why I have to put galleryList here but tried it and it worked
     const registerLikes = (galleryList) => {
       axios({
         method: 'PUT',
@@ -51,7 +54,9 @@ function App() {
     }
 
 
-
+    const refresh = () => {
+      getGallery();
+    }
     return (
       <div className="App">
         <Header />
@@ -60,6 +65,7 @@ function App() {
         GET request itself to the subsequent jsx folder to display images where it is called on app.jsx*/}
         <GalleryList galleryList={galleryList} getGallery= {getGallery} registerLikes={registerLikes}/>
         <Footer />
+
       </div>
     );
 }

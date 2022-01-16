@@ -6,7 +6,7 @@ const galleryItems = require('../modules/gallery.data');
 
 // PUT Route
 router.put('/likes/:id', (req, res) => {
-    console.log('the req.params are', req.params);
+    //console.log('the req.params are', req.params);
     const galleryId = req.params.id;
     for(const galleryItem of galleryItems) {
         if(galleryItem.id == galleryId) {
