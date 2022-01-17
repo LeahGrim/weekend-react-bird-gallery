@@ -43,10 +43,10 @@ function App() {
           method: 'PUT',
           url: `/gallery/dislikes/${galleryList.id}`
       }).then(response => {
-          console.log('PUT success on likes.jsx, likes updated', response);
+          console.log('PUT success on App.jsx, dislikes updated');
           getGallery();
       }).catch((error) => {
-          console.log('something funky happened on the PUT request in the likes.jsx', error);
+          console.log('something funky happened on the PUT request in the Apps.jsx', error);
       })
 
       }
@@ -57,10 +57,11 @@ function App() {
           method: 'PUT',
           url: `/gallery/likes/${galleryList.id}`
         }).then(response => {
-          console.log('PUT success on likes.jsx, likes updated', response);
+          console.log('PUT success on App.jsx, likes updated');
+
           getGallery();
         }).catch((error) => {
-          console.log('something funky happened on the PUT request in the likes.jsx', error);
+          console.log('something funky happened on the PUT request in the App.jsx', error);
         })
       }
 
