@@ -38,10 +38,10 @@ function App() {
           })
       }
       // function to register dislike both on the DOM and Server 
-      const registerDislikes = (galleryList) => {
+      const registerDislikes = (pictureToLike) => {
       axios({
           method: 'PUT',
-          url: `/gallery/dislikes/${galleryList.id}`
+          url: `/gallery/dislikes/${pictureToLike.id}`
       }).then(response => {
           console.log('PUT success on App.jsx, dislikes updated');
           getGallery();
@@ -52,10 +52,11 @@ function App() {
       }
 
       //not sure why I have to put galleryList here but tried it and it worked
-      const registerLikes = (galleryList) => {
+      //Passing pictureToLike as a parameter for registerLikes 
+      const registerLikes = (pictureToLike) => {
         axios({
           method: 'PUT',
-          url: `/gallery/likes/${galleryList.id}`
+          url: `/gallery/likes/${pictureToLike.id}`
         }).then(response => {
           console.log('PUT success on App.jsx, likes updated');
 
